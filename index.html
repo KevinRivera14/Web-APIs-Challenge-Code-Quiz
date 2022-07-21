@@ -1,43 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="main-title">WEB-API-CODE-QUIZ</title>
-    <link rel="stylesheet" href="./style.css" />
-</head> 
+    <title> CODE QUIZ GAME </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- start quiz button here -->
+    <div class="start_btn"><button>Start quiz</button></div> 
 
-<body> 
-   
-    <p class="main-timer">timer:</p>
-    <div class="second-container"> 
-        <p> Many have tried to pass...but none have succeded.</p>
-    </div>
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn "> Answer 1 </button>
-                <button class="btn"> Answer 2 </button>
-                <button class="btn"> Answer 3 </button>
-                <button class="btn "> Answer 4 </button>
-            </div> 
-
+    <!-- info box  -->
+    <div class="info_box">
+        <div class="info_list">
+            <div class="info"> 1. you will only have <span> 20 seconds</span>per each question.</div>
+            <div class="info"> 2. once you select your answer, it cant be undone.</div>
+            <div class="info"> 3. you cant select any option once time goes off.</div>
+            <div class="info"> 4. you cant exit from the quiz while you're playing.</div>
+            <div class="info"> 5. you'll get points on the basis of your correct answers.</div>
+        </div>
+        
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">continue</button>
         </div>
     </div>
-    <div class="controls">
-        <button id="Start-btn" class="start-btn btn">start</button>
-        <button id="Next-btn" class="next-btn btn hide">Next</button>
+
+    <!-- quiz box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">WEB DEVELOPMENT QUIZ</div>
+            <div class="timer">
+                <div class="time_text"> Time Left</div>
+                <div class="timer_sec">20</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text"> 
+                <span>what does HTML stand for?</span>
+            </div>  
+            <div class="option_list">
+                <div class="option">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"></div>
+                </div>
+                <div class="option">
+                    <span> Hyper Text Markup Langauge</span>
+                    <div class="icon cross"></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Sniper Gang </span>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Multi Langauge</span>
+                </div>
+
+            </div>
+        </section>
+        <!-- quiz box footer -->
+        <footer>
+            <div class="total_que">
+                <span><p>2</p>of<p>5</p><questions/span>
+            </div>
+            <button class="next_btn">next question</button>
+
+
+
+
+        </footer>
+
+        <!-- result Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">You've completed the Quiz!</div>
+            <div class="score_text">
+                <span> and sorry, you only got <p>2</p> out of <p>5</p> </span>
+            </div>
+            <div class="buttons">
+                <button class="restart">replay quiz </button>
+                <button class="quit">Quit Quiz</button>
+            </div>
+        </div>
     </div>
-
-    </div>
-
-
-    <h1 class="main-h1"> WEB-API-CODE-QUIZ</h1>
-    <P class="main-paragraph"> THIS IS A QUIZ TO TEST YOUR COMPUTER SCIENCE SKILLS!</P>
-    <script src="./script.js"></script>
+    
+    <script src="./questions.js"></script>  
+    <script src="./script.js"></script> 
 </body>
-
 </html>
